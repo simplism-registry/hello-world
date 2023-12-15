@@ -14,4 +14,4 @@ git commit -m "📦 ${MESSAGE}"
 git tag -a ${TAG} -m "${MESSAGE}"
 git push origin ${TAG}
 
-gh release create ${TAG} ./hello-world.wasm --title ${TITLE} --notes-from-tag --latest
+gh release create ${TAG} ./hello-world.wasm --title ${TITLE} --notes ${MESSAGE} --latest
