@@ -10,6 +10,7 @@ tasks:
         sudo tar -xf simplism.tar.gz -C /usr/bin
         rm simplism.tar.gz
         simplism version
+        go mod tidy
 
 vscode:
   extensions:
