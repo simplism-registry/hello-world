@@ -24,3 +24,13 @@ curl http://localhost:8080/hello/world \
 -H 'content-type: application/json; charset=utf-8' \
 -d '{"firstName":"Bob","lastName":"Morane"}'
 ```
+
+## Download a release of hello-world.wasm
+
+```bash
+ORGANISATION="simplism-registry"
+PROJECT="hello-world"
+WASM_FILE="${PROJECT}.wasm"
+VERSION="0.0.1"
+wget https://github.com/${ORGANISATION}/${PROJECT}/releases/download/v${VERSION}/${WASM_FILE} -O ${WASM_FILE}
+```
