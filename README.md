@@ -32,5 +32,19 @@ ORGANISATION="simplism-registry"
 PROJECT="hello-world"
 WASM_FILE="${PROJECT}.wasm"
 VERSION="0.0.1"
+
 wget https://github.com/${ORGANISATION}/${PROJECT}/releases/download/v${VERSION}/${WASM_FILE} -O ${WASM_FILE}
+```
+
+## Start a remote Simplism service from an URL
+
+```bash
+ORGANISATION="simplism-registry"
+PROJECT="hello-world"
+WASM_FILE="${PROJECT}.wasm"
+VERSION="0.0.1"
+
+simplism listen \
+hello-world.wasm handle --http-port 8080 --log-level info \
+--wasm-url https://github.com/${ORGANISATION}/${PROJECT}/releases/download/v${VERSION}/${WASM_FILE}
 ```
