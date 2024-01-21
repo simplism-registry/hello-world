@@ -41,7 +41,7 @@ func handle() {
     pdk.Log(pdk.LogInfo, "📝 uri:"+requestData.URI)
     pdk.Log(pdk.LogInfo, "📝 body:"+requestData.Body)
     
-    message := "🤗 Hello "
+    message := "🤗 Hello " + requestData.Body
     
     /* Expected response
     type ResponseData struct {
